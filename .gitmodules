@@ -4,3 +4,6 @@
 [submodule "rgb-agent"]
 	path = rgb-agent
 	url = git@github.com:joseherminiocollas/rgb-agent.git
+[submodule "feather-one"]
+	path = feather-one
+	url = git@github.com:joseherminiocollas/feather-one.git
