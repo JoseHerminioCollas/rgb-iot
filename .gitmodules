@@ -1,3 +1,6 @@
 [submodule "rgb-client"]
 	path = rgb-client
 	url = git@github.com:joseherminiocollas/rgb-client.git
+[submodule "rgb-agent"]
+	path = rgb-agent
+	url = git@github.com:joseherminiocollas/rgb-agent.git
