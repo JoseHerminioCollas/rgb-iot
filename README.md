@@ -26,25 +26,29 @@ There are a number of solutions out there to achieve this is a WIP (work in prog
 A user of the system has access to a page with various user interface.
 These various UI send messages to the Node servers' API. 
 
-This API is as follows:
+### This API is as follows:
 
-POST
-    /application-name/device-name/property-name/sub-property-name/value [ 0 - 255 ]
-POST
-    /application-name/device-name/property-name/value [ 0 - 255 ]
+    POST
+        /application-name/device-name/property-name/sub-property-name/value [ 0 - 255 ]
+    POST
+        /application-name/device-name/property-name/value [ 0 - 255 ]
 
 Target a characteristic of a light on a device in the context of the application 'rgb'
+
     /rgb/edge-1/light/red/100
 
 Target a characteristic of a fan on a particular device in the context of the application 'rgb'
+
     /rgb/edge-1/fan/on
 
 API calls for controlling distinct LEDs
+
     /rgb/edge-1/light/red/VALUE [ 0 - 255 ]
     /rgb/edge-1/light/green/VALUE [ 0 - 255 ]
     /rgb/edge-1/light/blue/VALUE [ 0 - 255 ]
 
 API paths for controlling the effects
+
     /rgb/edge-1/effect/glow/VALUE [ on off]
     /rgb/edge-1/effect/march/VALUE [ on off]
 
@@ -55,9 +59,10 @@ These calls will start and stop functions that will drive the LEDs "effects" or 
 
 Once the Node server API is posted to, an MQTT call is made in the form:
 
-'application-name:device-name:property-of-device:sub-property' -m value
+    'application-name:device-name:property-of-device:sub-property' -m value
 
 Examples include:
+
     'rgb:edge-1:light:red' -m 0
     'rgb:edge-1:light:green' -m 100
     'rgb:edge-1:light:blue' -m 200
